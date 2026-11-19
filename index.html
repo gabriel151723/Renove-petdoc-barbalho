@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RENOVE &amp; PetDOC · Odontologia Veterinária e Cirurgia Oral em Barbalho, Salvador</title>
+  <meta name="description" content="Mau hálito, tártaro e dor bucal afetam diretamente a qualidade de vida de cães e gatos. Atendimento especializado no Barbalho, exclusivamente com hora marcada.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VeterinaryCare", "name": "A RENOVE & PetDOC - Odontologia Veterinária e Cirurgia Oral", "telephone": "+5571999730130", "address": {"@type": "PostalAddress", "streetAddress": "Rua São José de Cima, 24 - Barbalho, Salvador - BA, 40301-036 (próximo ao IFBA)", "addressLocality": "Salvador", "addressRegion": "BA", "addressCountry": "BR"}, "openingHours": "Seg a Sex: 08h às 17h · Sáb: 09h às 12h (somente com hora marcada)"}</script>
+  <style>
+    :root {
+      --bg: #FAFBFC;
+      --surface: #FFFFFF;
+      --surface-alt: #EAF2F4;
+      --ink: #12263A;
+      --muted: #4E6275;
+      --accent: #0E7C7B;
+      --accent-dark: #095B5A;
+      --accent-soft: #E0F3F3;
+      --border: #D7E3EA;
+      --font-display: 'Lora', Georgia, serif;
+      --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+
+    /* Barra discreta de demonstração */
+    .demo-ribbon {
+      background: var(--ink);
+      color: #F7F5F2;
+      font-size: 12px;
+      padding: 8px 16px;
+      text-align: center;
+      letter-spacing: 0.01em;
+    }
+    .demo-ribbon strong { color: #FFFFFF; font-weight: 600; }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: color-mix(in srgb, var(--bg) 92%, transparent);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 70px;
+    }
+    .brand { display: flex; flex-direction: column; }
+    .brand-name {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+    }
+    .brand-sub {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+    .nav-links {
+      display: none;
+      gap: 24px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--muted);
+    }
+    .nav-links a:hover { color: var(--ink); }
+
+    /* Botões */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 22px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 14px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary {
+      background: var(--accent);
+      color: #FFFFFF;
+    }
+    .btn-primary:hover { background: var(--accent-dark); }
+    .btn-outline {
+      background: transparent;
+      border-color: var(--border);
+      color: var(--ink);
+    }
+    .btn-outline:hover { border-color: var(--ink); }
+    .btn-sm { padding: 9px 16px; font-size: 13px; }
+
+    /* Hero */
+    .hero {
+      padding: 56px 0 64px;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+    .eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent-dark);
+      background: var(--accent-soft);
+      padding: 6px 12px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+    }
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+    .lead {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 54ch;
+      margin-bottom: 28px;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 36px;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+    .stat-val {
+      font-family: var(--font-display);
+      font-size: clamp(1.35rem, 2.5vw, 1.85rem);
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--ink);
+    }
+    .stat-lbl {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 4px;
+      line-height: 1.35;
+    }
+
+    /* Widget de conversão no Hero */
+    .booking-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: 0 18px 45px -24px rgba(18, 24, 32, 0.14);
+    }
+    .booking-card h2 {
+      font-family: var(--font-display);
+      font-size: 1.65rem;
+      line-height: 1.15;
+      margin-bottom: 8px;
+    }
+    .booking-card > p {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+    .field { margin-bottom: 14px; }
+    .field label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+    .field select, .field input {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--ink);
+      font-family: inherit;
+      font-size: 14px;
+    }
+    .field select:focus, .field input:focus {
+      outline: 2px solid var(--accent);
+      outline-offset: 1px;
+    }
+    .booking-meta {
+      margin-top: 14px;
+      font-size: 12px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Seções */
+    section.band { padding: 72px 0; }
+    section.band-alt { background: var(--surface-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .section-head {
+      max-width: 620px;
+      margin-bottom: 36px;
+    }
+    .section-kicker {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent-dark);
+      margin-bottom: 8px;
+    }
+    .section-head h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.85rem, 3.6vw, 2.65rem);
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+    }
+    .section-head p { color: var(--muted); font-size: 15px; }
+
+    /* Cards de serviços */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 26px;
+    }
+    .card-num {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    .card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .card p {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    /* Diferenciais & Localização */
+    .split {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+    .check-list {
+      list-style: none;
+      display: grid;
+      gap: 14px;
+      margin-top: 20px;
+    }
+    .check-list li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      font-size: 15px;
+    }
+    .check {
+      flex-shrink: 0;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+    .info-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+      display: grid;
+      gap: 18px;
+    }
+    .info-row {
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    .info-row:last-of-type { border-bottom: 0; padding-bottom: 0; }
+    .info-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--muted);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .info-value { font-size: 15px; font-weight: 500; }
+
+    /* FAQ */
+    .faq-list { display: grid; gap: 12px; max-width: 800px; }
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 22px;
+    }
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item .plus {
+      font-size: 20px;
+      color: var(--accent);
+      transition: transform 0.2s ease;
+    }
+    .faq-item[open] .plus { transform: rotate(45deg); }
+    .faq-item p {
+      margin-top: 12px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    /* CTA Final */
+    .cta-panel {
+      background: var(--ink);
+      color: #FFFFFF;
+      border-radius: 24px;
+      padding: 44px 28px;
+      text-align: center;
+    }
+    .cta-panel h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      line-height: 1.12;
+      margin-bottom: 12px;
+    }
+    .cta-panel p {
+      color: rgba(255,255,255,0.78);
+      max-width: 52ch;
+      margin: 0 auto 24px;
+      font-size: 15px;
+    }
+
+    /* Footer */
+    footer {
+      padding: 36px 0 92px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .foot-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+    }
+
+    /* Botão Flutuante WhatsApp */
+    .wa-float {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 50;
+      background: #1FA855;
+      color: #FFFFFF;
+      padding: 13px 18px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 12px 28px rgba(18, 95, 48, 0.35);
+    }
+    .wa-float:hover { background: #198F47; }
+
+    @media (min-width: 860px) {
+      .nav-links { display: flex; }
+      .hero { padding: 72px 0 88px; }
+      .hero-grid { grid-template-columns: 1.15fr 0.85fr; gap: 48px; }
+      .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+      .split { grid-template-columns: 1.05fr 0.95fr; gap: 48px; }
+      .cta-panel { padding: 56px 48px; }
+      footer { padding-bottom: 48px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-ribbon">
+    Protótipo exclusivo criado para <strong>RENOVE &amp; PetDOC</strong> · Desenvolvido por <strong>Gabriel Henrique · Desenvolvedor Web</strong>
+  </div>
+
+  <header>
+    <div class="wrap nav">
+      <a href="#topo" class="brand">
+        <span class="brand-name">RENOVE &amp; PetDOC</span>
+        <span class="brand-sub">Odontologia Veterinária &amp; Cirurgia Oral</span>
+      </a>
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="#servicos">Serviços</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#localizacao">Localização</a>
+        <a href="#duvidas">Dúvidas</a>
+      </nav>
+      <a class="btn btn-primary btn-sm" href="https://wa.me/5571999730130?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20RENOVE%20%26%20PetDOC%20e%20gostaria%20de%20agendar%20um%20atendimento." target="_blank" rel="noopener">
+        WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <main id="topo">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">Barbalho · Salvador · 5,0 ★ Petlove Saúde · Hora Marcada</span>
+          <h1>Odontologia veterinária e cirurgia oral especializada para a saúde do seu pet.</h1>
+          <p class="lead">Mau hálito, tártaro e dor bucal afetam diretamente a qualidade de vida de cães e gatos. Atendimento especializado no Barbalho, exclusivamente com hora marcada.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/5571999730130?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20RENOVE%20%26%20PetDOC%20e%20gostaria%20de%20agendar%20um%20atendimento." target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              Agendar avaliação odontológica
+            </a>
+            <a class="btn btn-outline" href="#servicos">Conhecer serviços</a>
+          </div>
+          <div class="stats"><div class="stat">
+          <div class="stat-val">5,0 ★</div>
+          <div class="stat-lbl">Nota máxima na Petlove Saúde</div>
+        </div><div class="stat">
+          <div class="stat-val">4,8 ★</div>
+          <div class="stat-lbl">44 avaliações reais no Google</div>
+        </div><div class="stat">
+          <div class="stat-val">Exclusivo</div>
+          <div class="stat-lbl">Atendimento só com hora marcada</div>
+        </div></div>
+        </div>
+
+        <aside class="booking-card" aria-label="Agendamento rápido">
+          <h2>Triagem rápida de saúde bucal pet</h2>
+          <p>Selecione o principal sinal observado no seu cão ou gato para agendar sua consulta com hora marcada.</p>
+          <form id="bookingForm">
+            <div class="field">
+              <label for="optSelect">O que você notou no seu pet?</label>
+              <select id="optSelect"><option value="Mau hálito ou acúmulo de tártaro">Mau hálito ou acúmulo de tártaro</option><option value="Gengiva vermelha / dificuldade para mastigar">Gengiva vermelha / dificuldade para mastigar</option><option value="Dente quebrado ou indicação de cirurgia oral">Dente quebrado ou indicação de cirurgia oral</option><option value="Consulta de Clínica Geral / Prevenção">Consulta de Clínica Geral / Prevenção</option></select>
+            </div>
+            <div class="field">
+              <label for="extraSelect">Atendimento via:</label>
+              <select id="extraSelect"><option value="Particular">Particular</option><option value="Plano Petlove Saúde">Plano Petlove Saúde</option><option value="Encaminhamento de outro veterinário">Encaminhamento de outro veterinário</option></select>
+            </div>
+            <div class="field">
+              <label for="clientName">Seu nome (opcional)</label>
+              <input id="clientName" type="text" placeholder="Ex.: Ana Paula" autocomplete="name">
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;">
+              Continuar no WhatsApp &rarr;
+            </button>
+          </form>
+          <div class="booking-meta">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Seg a Sex: 08h às 17h · Sáb: 09h às 12h (somente com hora marcada)</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="servicos" class="band band-alt">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-kicker">Nossos Serviços</div>
+          <h2>Atendimento focado em resultado e bem-estar real.</h2>
+          <p>Cada procedimento é planejado de acordo com a sua necessidade em Barbalho, Salvador.</p>
+        </div>
+        <div class="grid-2"><article class="card">
+          <div class="card-num">01</div>
+          <h3>Profilaxia Dentária (Tártaro)</h3>
+          <p>Remoção técnica de tártaro e placa bacteriana para eliminar o mau hálito e proteger coração, rins e gengivas.</p>
+        </article><article class="card">
+          <div class="card-num">02</div>
+          <h3>Odontologia Veterinária</h3>
+          <p>Diagnóstico especializado de doença periodontal, fraturas dentárias, gengivite e lesões orais em cães e gatos.</p>
+        </article><article class="card">
+          <div class="card-num">03</div>
+          <h3>Cirurgia Oral Veterinária</h3>
+          <p>Extrações complexas e procedimentos cirúrgicos orais conduzidos com rigor clínico e conforto para o animal.</p>
+        </article><article class="card">
+          <div class="card-num">04</div>
+          <h3>Clínica Geral com Hora Marcada</h3>
+          <p>Consultas tranquilas e sem estresse de espera no Barbalho (próximo ao IFBA), com atenção dedicada ao seu pet.</p>
+        </article></div>
+      </div>
+    </section>
+
+    <section id="diferenciais" class="band">
+      <div class="wrap split">
+        <div>
+          <div class="section-kicker">Por que escolher a RENOVE &amp; PetDOC</div>
+          <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,2.5rem);line-height:1.12;margin-bottom:12px;">
+            Reputação comprovada por quem já passou por aqui.
+          </h2>
+          <p style="color:var(--muted);font-size:15px;">
+            Avaliação verificada: <strong>4,8/5 (44 avaliações Google) · 5,0/5 Petlove Saúde</strong>.
+          </p>
+          <ul class="check-list"><li>
+          <span class="check" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <span>Especialidade em Odontologia Veterinária e Cirurgia Oral para cães e gatos em Salvador</span>
+        </li><li>
+          <span class="check" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <span>Nota 5,0/5 no Petlove Saúde e 4,8/5 no Google (44 avaliações)</span>
+        </li><li>
+          <span class="check" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <span>Atendimento exclusivo com hora marcada — zero espera estressante para o pet</span>
+        </li><li>
+          <span class="check" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <span>Localização central no Barbalho (próximo ao IFBA), recebendo tutores de toda Salvador</span>
+        </li></ul>
+        </div>
+
+        <div id="localizacao" class="info-box">
+          <div class="info-row">
+            <div class="info-label">Endereço</div>
+            <div class="info-value">Rua São José de Cima, 24 - Barbalho, Salvador - BA, 40301-036 (próximo ao IFBA)</div>
+          </div>
+          <div class="info-row">
+            <div class="info-label">Horário de atendimento</div>
+            <div class="info-value">Seg a Sex: 08h às 17h · Sáb: 09h às 12h (somente com hora marcada)</div>
+          </div>
+          <div class="info-row">
+            <div class="info-label">Telefone / WhatsApp</div>
+            <div class="info-value">(71) 99973-0130</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;padding-top:4px;">
+            <a class="btn btn-primary btn-sm" href="https://wa.me/5571999730130?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20RENOVE%20%26%20PetDOC%20e%20gostaria%20de%20agendar%20um%20atendimento." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+            <a class="btn btn-outline btn-sm" href="https://www.google.com/maps/search/?api=1&query=A%20RENOVE%20%26%20PetDOC%20-%20Odontologia%20Veterin%C3%A1ria%20e%20Cirurgia%20Oral%20Rua%20S%C3%A3o%20Jos%C3%A9%20de%20Cima%2C%2024%20-%20Barbalho%2C%20Salvador%20-%20BA%2C%2040301-036%20%28pr%C3%B3ximo%20ao%20IFBA%29" target="_blank" rel="noopener">Ver rota no Mapa ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="duvidas" class="band band-alt">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-kicker">Dúvidas Frequentes</div>
+          <h2>Tudo claro antes do seu agendamento.</h2>
+        </div>
+        <div class="faq-list"><details class="faq-item" open>
+          <summary>Mau hálito em cachorro ou gato é normal?<span class="plus" aria-hidden="true">+</span></summary>
+          <p>Não! O mau hálito forte geralmente indica acúmulo de tártaro e doença periodontal, que causam dor silenciosa e podem comprometer órgãos vitais se não tratados.</p>
+        </details><details class="faq-item">
+          <summary>O atendimento precisa ser agendado?<span class="plus" aria-hidden="true">+</span></summary>
+          <p>Sim. Atendemos exclusivamente com hora marcada justamente para evitar sala de espera lotada e reduzir o estresse do seu pet.</p>
+        </details><details class="faq-item">
+          <summary>Vocês aceitam plano Petlove Saúde?<span class="plus" aria-hidden="true">+</span></summary>
+          <p>Sim! Somos credenciados na Petlove Saúde com nota 5,0/5, além de atendermos particulares e encaminhamentos de colegas veterinários.</p>
+        </details><details class="faq-item">
+          <summary>Onde fica a RENOVE &amp; PetDOC?<span class="plus" aria-hidden="true">+</span></summary>
+          <p>Na Rua São José de Cima, 24 — Barbalho, Salvador - BA (próximo ao IFBA e ao Instituto dos Cegos da Bahia). Seg–Sex 08h–17h e Sáb 09h–12h.</p>
+        </details></div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <div class="cta-panel">
+          <h2>Pronto para agendar na RENOVE &amp; PetDOC?</h2>
+          <p>Fale agora com nossa equipe em Barbalho, Salvador, e escolha o melhor horário para você.</p>
+          <a class="btn btn-primary" href="https://wa.me/5571999730130?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20RENOVE%20%26%20PetDOC%20e%20gostaria%20de%20agendar%20um%20atendimento." target="_blank" rel="noopener">
+            Agendar avaliação odontológica · (71) 99973-0130
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot-inner">
+      <span>&copy; 2026 A RENOVE &amp; PetDOC - Odontologia Veterinária e Cirurgia Oral · Salvador - BA</span>
+      <span>Protótipo MVP demonstrativo por <strong>Gabriel Henrique · Desenvolvedor Web</strong></span>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/5571999730130?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20RENOVE%20%26%20PetDOC%20e%20gostaria%20de%20agendar%20um%20atendimento." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+    WhatsApp
+  </a>
+
+  <script>
+    (function() {
+      const form = document.getElementById("bookingForm");
+      const tmpl = "Olá, equipe RENOVE & PetDOC! Vim pelo site e gostaria de agendar avaliação com hora marcada para meu pet. Sinal observado: {OPTION} ({EXTRA}).";
+      const phone = "5571999730130";
+      form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        const opt = document.getElementById("optSelect").value;
+        const extra = document.getElementById("extraSelect").value;
+        const name = document.getElementById("clientName").value.trim();
+        let msg = tmpl.replace("{OPTION}", opt).replace("{EXTRA}", extra);
+        if (name) msg += " Meu nome é " + name + ".";
+        window.open("https://wa.me/" + phone + "?text=" + encodeURIComponent(msg), "_blank", "noopener");
+      });
+    })();
+  </script>
+</body>
+</html>
